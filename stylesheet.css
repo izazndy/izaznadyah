@@ -116,37 +116,77 @@ header .fa-bars{
   display: none;
 }
 
-.home {
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
-  background: url("https://cdn.mozo.com.au/images/atwood/14517/Screen%20Shot%202023-02-02%20at%2011.21.15%20am.jpeg") no-repeat;
-  background-size: cover;
-  background-position: center;
+/*slider content*/
+.container{
+  padding: 10px;
 }
 
-.home .content{
-  max-width: 50rem;
+#slider {
+	overflow: hidden;
 }
 
-.home .content h3{
-  font-size: 6rem;
+@keyframes slider {
+	0% { left: 0; }
+	30% { left: 0; }
+	33% { left: -100%; }
+	63% { left: -100%; }
+	66% { left: -200%; }
+	95% { left: -200%; }
+	100% { left: 0; }
+}
+#slider figure {
+	width:300%;
+	position: relative;
+	animation: 9s slider infinite;
+}
+
+#slider figure img {
+	width: 33.333333333%;
+	height : 100%;
+	float: left;
+  padding-top: 50px;
+  margin-top: 50px;
+}
+
+.content-1{
+    width: 33.33333%;
+	  height : 100%;
+	  float: left;
+    align-items: center;
+    min-height: 120vh;
+    padding-top: 100px;
+    margin-top: 100px;
+    background-size: cover;
+    background: url("https://cdn.mozo.com.au/images/atwood/14517/Screen%20Shot%202023-02-02%20at%2011.21.15%20am.jpeg") no-repeat;
+}
+
+.tulisan h3{
+  font-size: 50px;
   color: #222121;
+  padding: 16px 0 0 50px;
+  margin-left: 50px;
 }
 
-.home .content span{
+.tulisan span{
   font-size: 3.5rem;
-  color: #E9967A;
-  padding: 1rem 0;
+  color: black;
+  padding: 16px 0 0 50px;
+  margin-left: 50px;
   line-height: 1.5;
 }
-
-.home .content p{
+.tulisan p{
   font-size: 1.5rem;
   color: #ffffff ;
-  padding: 1rem 0;
+  padding: 16px 0 0 50px;
+  margin-left: 50px;
   line-height: 1.5;
 }
+
+.btn-slider{
+  padding: 20px 50px 20px 106px;
+}
+
+  
 .about .row{
   display: #E9967A;
   align-items: center;
@@ -242,13 +282,16 @@ header .fa-bars{
 .products .box-container .box .image{
   position: relative;
   text-align: center;
-  padding-top: 2rem;
   overflow: hidden;
+  padding-bottom: 1 rem;
 }
+
 
 .products .box-container .box .image img{
   height: 25rem;
+  padding-bottom: 1rem;
 }
+
 
 .products .box-container .box:hover .image img{
   transform: scale(1.1);
@@ -270,7 +313,7 @@ header .fa-bars{
   height: 5rem;
   line-height: 5rem;
   font-size: 2rem;
-  width: 50%;
+  width: 40%;
   background: #E9967A;
   color: #fff;
 }
@@ -283,6 +326,7 @@ header .fa-bars{
 
 .products .box-container .box .image .icons a:hover{
   background: #333;
+  opacity: 0.7;
 }
 
 .products .box-container .box .content{
@@ -378,13 +422,13 @@ header .fa-bars{
 .contact .row form{
   flex: 1 1 4rem;
   padding: 2rem 2.5rem;
-  box-shadow: 0 .5rem 1 rem rgba(0,0,0,.1);
-  border: 1rem solid rgba(0,0,0,.1);
+  box-shadow: 0 .5rem 1 rem #E9967A;
+  border: 0.3rem solid #E9967A;
   background: #fff;
   border-radius: .5rem;
 }
 .contact .row .image{
-  flex: 1 1 40rem;
+  flex: 1 1 20rem;
 }
 .contact .row .image img{
   width: 80%;
@@ -395,14 +439,14 @@ header .fa-bars{
   font-size: 1.7rem;
   color: #333;
   text-transform: none;
-  border: 1rem solid rgba(0,0,0,.1);
-  border-radius: .5rem;
+  border: 0.5rem solid #E9967A;
+  border-radius: .2rem;
   margin: .7rem 0;
   width: 100%;
 }
 
 .contact .row form .box:focus{
-  border-color: rgb(0, 0, 0);
+  border-color: #E9967A;
 }
 
 .contact .row form textarea{
@@ -461,7 +505,7 @@ header .fa-bars{
 
 
 
-
+/*responsive */
 /*media queries */
 @media (max-width:991px){
   html{
